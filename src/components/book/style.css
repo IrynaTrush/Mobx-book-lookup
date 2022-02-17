@@ -1,0 +1,25 @@
+.book_container {
+  border-radius: 5px;
+  box-shadow: 0 0 5px lightgray;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 30px;
+  padding: 10px;
+}
+
+.book_description {
+  text-align: center;
+  font-family: var(--additional-font-family);
+  color: #4d4d4d;
+}
+
+.book_label {
+  color: #000;
+  font-weight: 600;
+}
+
+.book_text {
+  margin: 5px;
+}

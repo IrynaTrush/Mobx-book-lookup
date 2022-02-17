@@ -15,6 +15,9 @@ const useStyles = makeStyles({
     minWidth: 300,
     fontFamily: 'var(--additional-font-family)',
     fontWeight: 600
+   },
+   label: {
+     fontFamily: 'var(--additional-font-family)',
    }
 })
 
@@ -40,6 +43,7 @@ const Search = () => {
             />
       </FormControl>
       <FormControlLabel
+        classes={{label: classes.label}}
         control={
           <Checkbox
             checked={searchintByAuthor}
@@ -49,28 +53,9 @@ const Search = () => {
         }
         label="Searching by author"
       />
-       {/* <input 
-          id="searchingByAuthor"
-          type="checkbox"
-          checked={searchintByAuthor}
-          onChange={(e) => setSearchingByAuthor(e.target.checked)}
-        />
-        <label htmlFor='searchingByAuthor'>
-            Searching by author
-        </label> */}
         </div>
         </div>
     )
 }
 
 export default observer(Search);
-
-
-// <>
-        //   <input 
-        //   placeholder='Search'
-        //   value={query}
-        //   disabled={isLoading}
-        //   onChange={(e) => setQuery(e.target.value)}
-        //   onKeyDown={(e) => (e.key === 'Enter' ? onSearch() : null)}
-        // />

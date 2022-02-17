@@ -1,4 +1,5 @@
 import CircularProgress from '@material-ui/core/CircularProgress';
+import './style.css';
 
 interface ISpin {
     isLoading: boolean;
@@ -7,7 +8,7 @@ interface ISpin {
 export default function Spin(props: ISpin) {
     const { isLoading } = props;
   return (
-    <div style={{display: 'flex'}}>
+    <div className='spinner_container'>
         {
           isLoading
           ?  <CircularProgress />
