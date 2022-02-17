@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@500&family=Space+Mono&display=swap');
+
+:root {
+  --font-family: 'Bangers', cursive;
+  --additional-font-family: 'Montserrat', sans-serif;
+}
+html,
+body {
+  display: 'flex';
+  flex: 1;
+  width: 100vw;
+  height: 100vh;
+}

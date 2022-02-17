@@ -1,16 +1,16 @@
-import React from 'react';
 import { observer } from 'mobx-react';
 import Spin from './components/spin';
-import { Input } from './components/input';
+import Search from './components/search';
 import { booksStore } from './book.store';
 import './style.css';
 
 const App = () => {
-  const { isLoading, books, search } = booksStore;
+  const { isLoading, books } = booksStore;
 
   return (
     <div>
-      <Input isLoading={isLoading} onSearch={search} />
+      <h1 className='title'>BOOKS LOOKUP</h1>
+      <Search/>
 
       <Spin isLoading={isLoading}/>
 

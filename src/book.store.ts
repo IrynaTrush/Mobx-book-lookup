@@ -8,12 +8,22 @@ class Store {
     }
 
     isLoading = false
+    searchintByAuthor = false;
+    query = '';
     books: Book[] = [] 
 
-    search = async (query: string) => {
+    setSearchingByAuthor = (value: boolean) => {
+        this.searchintByAuthor = value
+    }
+
+    setQuery = (value: string) => {
+        this.query = value
+    }
+
+    onSearch = async () => {
         try {
             this.isLoading = true
-            const result = await api.searchBook(query)
+            const result = await api.searchBook(this.query, this.searchintByAuthor)
             if(result === null) return alert('Server error')
 
             this.books = result.filter((item: Book) => item.cover)

@@ -1,0 +1,14 @@
+.search-icon {
+  color: #0059b3;
+}
+.search-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-conatiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
