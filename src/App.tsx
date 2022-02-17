@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { observer } from 'mobx-react';
+import Spin from './components/spin';
+import { Input } from './components/input';
+import { booksStore } from './book.store';
+import './style.css';
 
-function App() {
+const App = () => {
+  const { isLoading, books, search } = booksStore;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Input isLoading={isLoading} onSearch={search} />
+
+      <Spin isLoading={isLoading}/>
+
+      {
+        books.map(({ key, cover, title, author}) => (
+          <div key={key}>
+            <img 
+              src={`https://covers.openlibrary.org/b/id/${cover}-M.jpg`}
+              alt=""
+              className='cover'
+            />
+
+            <div>
+              {title}
+              <br/>
+              <i>{author}</i>
+            </div>
+
+            <hr/>
+          </div>
+        ))
+      }
     </div>
-  );
+  )
 }
 
-export default App;
+export default observer(App);

@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import { configure } from 'mobx';
 import reportWebVitals from './reportWebVitals';
+
+setTimeout(() => {
+  configure({
+    enforceActions:'never',
+    reactionScheduler: (f) => setTimeout(f)
+  })
+})
 
 ReactDOM.render(
   <React.StrictMode>
