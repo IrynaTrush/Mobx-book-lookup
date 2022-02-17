@@ -19,7 +19,7 @@ const App = () => {
         ? books.map(({ key, cover, title, author}) => (
           <Book key={key} cover={cover} title={title} author={author}/>
         ))
-        : <h2 className="nomatch_title">No books founded</h2>
+        : <h2 className="nomatch_title">No books were founded</h2>
       }
       </div>
     </div>
