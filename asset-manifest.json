@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Mobx-book-lookup/static/css/main.e5e6b879.css",
+    "main.js": "/Mobx-book-lookup/static/js/main.da93b2cf.js",
+    "static/js/787.676f6012.chunk.js": "/Mobx-book-lookup/static/js/787.676f6012.chunk.js",
+    "index.html": "/Mobx-book-lookup/index.html",
+    "main.e5e6b879.css.map": "/Mobx-book-lookup/static/css/main.e5e6b879.css.map",
+    "main.da93b2cf.js.map": "/Mobx-book-lookup/static/js/main.da93b2cf.js.map",
+    "787.676f6012.chunk.js.map": "/Mobx-book-lookup/static/js/787.676f6012.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5e6b879.css",
+    "static/js/main.da93b2cf.js"
+  ]
+}
